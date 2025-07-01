@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabLab</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="icon" href="src/imgs/icon.png" type="image/png">
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/clock.js" defer></script>
+    <script src="src/js/lang.js" defer></script>
+    <script src="src/js/quote.js" defer></script>
+    <script src="src/js/todo.js" defer></script>
+    <script src="src/js/search.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div id="search-container">
+            <div id="clock"></div>
+            <div id="quote"></div>
+            <input id="search-bar" type="text" autocomplete="off" />
+
+            <select id="search-engine">
+                <option value="google">Google</option>
+                <option value="bing">Bing</option>
+                <option value="naver">Naver</option>
+                <option value="daum">Daum</option>
+            </select>
+        </div>
+
+        <div id="todo-container">
+            <div id="todo">
+                <ul id="todo-list"></ul>
+            </div>
+            <input type="text" id="todo-input" />
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Quema100. All rights reserved.</p>
+    </footer>
+</body>
