@@ -11,6 +11,17 @@
         background-color: var(--bg-dark);
         color: var(--text-dark);
     }
+
+    #todo-input,
+    #search-bar,
+    #search-engine {
+        background-color: #333;
+        color: white;
+    }
+
+    #todo-list li {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -18,17 +29,16 @@
         background-color: var(--bg-light);
         color: var(--text-light);
     }
-}
 
-@media (prefers-color-scheme: light) {
+    #todo-input,
+    #search-bar,
+    #search-engine {
+        background-color: #f0f0f0;
+        color: black;
+    }
+
     #todo-list li {
         background-color: rgba(255, 255, 255, 0.753);
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    #todo-list li {
-        background-color: rgba(255, 255, 255, 0.08);
     }
 }
 
@@ -93,6 +103,35 @@ footer {
     max-width: 90%;
 }
 
+#search-container>#search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+}
+
+#search-container>#search>#search-engine {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    transition: border 0.2s ease;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+#search-container>#search>#search-bar {
+    padding: 12px;
+    width: 400px;
+    max-width: 90%;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 #todo-container {
     display: flex;
     width: 30%;
@@ -111,13 +150,37 @@ footer {
 }
 
 #todo-container>#todo>#todo-list {
-    margin-top: 30px;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
     list-style: none;
     padding: 0;
     width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+#todo-container>#todo>#todo-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#todo-container>#todo>#todo-list::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 5px;
+}
+
+#todo-container>#todo>#todo-list::-webkit-scrollbar-thumb {
+    background: #a1a1a183;
+    border-radius: 30px;
 }
 
 #todo-container>#todo>#todo-list li {
+    display: flex;
+    width: 90%;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
     padding: 8px 12px;
     margin-bottom: 8px;
     border-radius: 6px;
@@ -130,7 +193,6 @@ footer {
 }
 
 #todo-container>#todo-input {
-    margin-top: 15px;
     padding: 10px;
     width: 50%;
     border: none;

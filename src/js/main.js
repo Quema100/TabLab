@@ -8,12 +8,6 @@ const main = () => {
             saveTodos(todoList);
         }
     });
-
-    document.getElementById('search-bar').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            search();
-        }
-    });
 }
 
 window.onload = () => {
@@ -22,4 +16,5 @@ window.onload = () => {
     updateClock();
     quote();
     loadTodos();
+    search();
 }
