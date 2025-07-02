@@ -1,7 +1,6 @@
 const searchengine = () => {
     const toggleButton = document.getElementById('search-toggle');
     const menu = document.getElementById('search-menu');
-    let selectedEngine = null;
 
     document.getElementById('search-toggle').addEventListener('click', () => {
         menu.classList.toggle('active');
