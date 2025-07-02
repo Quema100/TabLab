@@ -5,6 +5,8 @@ const search = () => {
 
     const userLang = navigator.language || navigator.userLanguage;
 
+    let engineHideTimer = null;
+
     searchBar.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && searchBar.value.trim()) {
             const selectedEngine = toggleButton.dataset.engine;
@@ -20,11 +22,14 @@ const search = () => {
             if (!urls[selectedEngine]) {
                 engine.style.opacity = 1;
                 engine.textContent = userLang.startsWith('ko') ? '유효한 검색 엔진을 선택하세요.' : 'Please select a valid search engine.';
-                return setTimeout(() => {
+                if (engineHideTimer) return;
+
+                return engineHideTimer = setTimeout(() => {
                     engine.style.opacity = 0;
                     setTimeout(() => {
                         engine.textContent = null;
                         engine.style.opacity = null;
+                        engineHideTimer = null;
                     }, 2000);
                 }, 3000);
             }
