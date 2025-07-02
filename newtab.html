@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TabLab</title>
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/dropdown.css">
+    <link rel="stylesheet" href="src/css/search.css">
+    <link rel="stylesheet" href="src/css/todo.css">
     <link rel="icon" href="src/imgs/icon.png" type="image/png">
     <script src="src/js/main.js" defer></script>
     <script src="src/js/clock.js" defer></script>
@@ -13,6 +16,7 @@
     <script src="src/js/quote.js" defer></script>
     <script src="src/js/todo.js" defer></script>
     <script src="src/js/search.js" defer></script>
+    <script src="src/js/dropdown.js" defer></script>
 </head>
 
 <body>
@@ -23,12 +27,16 @@
             <div id="search">
                 <input id="search-bar" type="text" autocomplete="off" />
 
-                <select id="search-engine">
-                    <option value="google">Google</option>
-                    <option value="bing">Bing</option>
-                    <option value="naver">Naver</option>
-                    <option value="daum">Daum</option>
-                </select>
+                <div class="search-engine" id="search-engine">
+                    <button class="search-engine-toggle" id="search-toggle"></button>
+                    <ul class="search-engine-menu" id="search-menu">
+                        <li data-value="google">Google</li>
+                        <li data-value="bing">Bing</li>
+                        <li data-value="naver">Naver</li>
+                        <li data-value="daum">Daum</li>
+                    </ul>
+                </div>
+                <a id="engine"></a>
             </div>
         </div>
 
