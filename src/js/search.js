@@ -22,7 +22,6 @@ const search = () => {
                 engine.textContent = userLang.startsWith('ko') ? '유효한 검색 엔진을 선택하세요.' : 'Please select a valid search engine.';
                 return setTimeout(() => {
                     engine.style.opacity = 0;
-
                     setTimeout(() => {
                         engine.textContent = null;
                         engine.style.opacity = null;
