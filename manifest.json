@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "TabLab",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "extensions by Quema",
     "incognito": "split",
     "chrome_url_overrides": {
